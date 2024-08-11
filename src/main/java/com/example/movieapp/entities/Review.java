@@ -13,13 +13,13 @@ public class Review {
     private Long id;
     private String reviewerName;
     private String comment;
-    private Long rate;
+    private Double rate;
 
     @ManyToOne
     @JoinColumn // default name = field + PK
     private Movie movie;
 
-    public Review(String reviewerName, String comment, Long rate) {
+    public Review(String reviewerName, String comment, Double rate) {
         this.reviewerName = reviewerName;
         this.comment = comment;
         this.rate = rate;

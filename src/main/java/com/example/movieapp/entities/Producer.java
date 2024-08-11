@@ -14,7 +14,9 @@ public class Producer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Long rating;
+
+    @Column(insertable = false, updatable = false)
+    private Double rating;
 
     @OneToMany
     private List<Movie> movies;

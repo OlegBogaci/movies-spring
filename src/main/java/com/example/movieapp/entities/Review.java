@@ -19,9 +19,12 @@ public class Review {
     @JoinColumn // default name = field + PK
     private Movie movie;
 
-    public Review(String reviewerName, String comment, Double rate) {
+    public Review() {}
+
+    public Review(String reviewerName, String comment, Double rate, Movie movie) {
         this.reviewerName = reviewerName;
         this.comment = comment;
         this.rate = rate;
+        this.movie = movie;
     }
 }

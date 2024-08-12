@@ -13,6 +13,6 @@ BEGIN
 END;
 ' LANGUAGE plpgsql;
 
-CREATE TRIGGER update_producer_rating_trigger
+CREATE OR REPLACE TRIGGER update_producer_rating_trigger
 AFTER INSERT OR UPDATE OR DELETE ON review
 FOR EACH ROW EXECUTE FUNCTION update_producer_rating();
